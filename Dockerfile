@@ -4,17 +4,15 @@
 # A minimal base image based on Alpine Linux with OpenSSH client
 #
 
-FROM alpine:latest
-
+FROM alpine:3.7
 
 # Set environment variables.
-ENV \
-  TERM=xterm-color
+ENV TERM=xterm-color
 
 # Install packages.
-RUN \
-  apk --update add bash openssh-client iproute2 curl drill && \
-  rm -rf /var/cache/apk/*
+RUN apk --update add bash openssh-client iproute2 curl drill 
+   && \
+    rm -rf /var/cache/apk/*
 
 # Set the default command.
-CMD ["/bin/bash"]
+CMD ["/bin/sh"]
