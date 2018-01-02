@@ -10,8 +10,7 @@ FROM alpine:3.7
 ENV TERM=xterm-color
 
 # Install packages.
-RUN apk --update add bash openssh-client iproute2 curl drill mtr
-   && \
+RUN apk --update add bash openssh-client iproute2 curl drill mtr iftop && \
     rm -rf /var/cache/apk/*
 
 # Set the default command.
