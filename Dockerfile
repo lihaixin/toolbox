@@ -17,6 +17,6 @@ RUN apk --update add bash openssh-client iproute2 curl drill mtr iftop && \
     rm -rf /var/cache/apk/*
 
 # Set the default command.
-WORKDIR /bin
+WORKDIR /root
 USER root
 CMD ["ping","localhost"]
