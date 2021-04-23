@@ -14,4 +14,4 @@
 5. iperf3
 6. tmux
 7. ssh
-8. dig
+8. dig nslookup
