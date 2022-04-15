@@ -1,5 +1,10 @@
 # toolbox
 
+## 构建镜像
+
+```
+docker buildx build --platform linux/arm64,linux/amd64 -t lihaixin/toolbox . --push
+```
 基于alpine提供的常用工具集.
 
 ```
