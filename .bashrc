@@ -18,8 +18,10 @@ alias speedcn='time curl -o /dev/null time curl -o /dev/null http://dldir1.qq.co
 
 echo -e -n '\E[1;34m'
 figlet -w 120 "TOOLBOX"
-echo "使用<lh SSH端口> 快速登陆宿主机 查看别名使用输入alias"
-echo "使用<iptraf-ng> 或者<iftop> 实时查看流量统计"
-echo "使用<mtr> 路由跟踪网络,使用<iperf3> 测试网络带宽"
+echo " # ------------------------------------------------------------------------------------------------ #"
+echo " # 使用<lh SSH端口> 快速登陆宿主机 查看别名使用输入alias"
+echo " # 使用<iptraf-ng> 或者<iftop> 实时查看流量统计"
+echo " # 使用<mtr> 路由跟踪网络,使用<iperf3> 测试网络带宽"
+echo " # ------------------------------------------------------------------------------------------------ #"
 echo -e -n '\E[1;34m'
 echo -e '\E[0m'
