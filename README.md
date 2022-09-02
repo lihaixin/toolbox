@@ -10,7 +10,7 @@ docker buildx build --platform linux/arm64,linux/amd64 -t lihaixin/toolbox . --p
 
 ## 运行
 ```
-docker run -d --restart=always \
+docker run -id --restart=always \
 --privileged --network=host \
 --pid=host --name toolbox \
 -v /root/.ssh/id_rsa:/root/.ssh/id_rsa \
