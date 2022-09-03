@@ -20,7 +20,9 @@ alias speedcn='time curl -o /dev/null http://dldir1.qq.com/qqfile/qq/QQ9.0.8/242
 echo -e -n '\E[1;34m'
 figlet -k -f big -c -m-1 -w 120 "Welcome `hostname`"
 echo " # ------------------------------------------------------------------------------------------------ #"
-if ip link show | grep docker0; then
+
+DOCKER=`ifconfig | grep -ci "docker0"`
+if [ $DOCKER -eq 1 ]; then
 DOCKERIP=`/sbin/ifconfig docker0 | grep 'inet' | awk '{ print $2}' | awk -F ":" '{print $2 }' | head -n 1`
 alias lh="ssh root@$DOCKERIP -p "
 echo " # 使用<lh SSH端口> 快速登陆宿主机 查看别名使用输入alias"
