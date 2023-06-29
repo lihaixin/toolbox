@@ -1,9 +1,9 @@
-FROM --platform=${TARGETPLATFORM} alpine:edge
+FROM --platform=${TARGETPLATFORM} lihaixin/base:3.16
 MAINTAINER Lee Haixin <noreply@15099.net>
 
 LABEL vendor="15099.net" \
-      release-date="2022-9-2" \
-      version="0.0.5"
+      release-date="2023-6-9" \
+      version="0.0.6"
 ENV TZ=Asia/Shanghai
 WORKDIR /root
 RUN apk add --no-cache --virtual .build-deps iftop mtr curl net-tools iperf3 htop tmux openssh-client bash tzdata bind-tools iptables figlet iptraf-ng nmap speedtest-cli
