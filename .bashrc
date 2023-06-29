@@ -33,5 +33,9 @@ echo " # 使用<mtr> 路由跟踪网络,使用<iperf3> 测试网络带宽"
 echo " # 使用<dig> 测试域名,使用<speed | speedcn> 测试下载带宽"
 
 echo " # ------------------------------------------------------------------------------------------------ #"
+if [ ! -f "/etc/expired" ]; then
+ntp
+fi
+/usr/bin/member.sh
 echo -e -n '\E[1;34m'
 echo -e '\E[0m'
