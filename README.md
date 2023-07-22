@@ -90,3 +90,4 @@ services:
 6. tmux
 7. ssh
 8. dig nslookup
+9. qemu-img info file.raw   |   qeme-img convert -f raw -O qcow2 file.raw file.qcow2
