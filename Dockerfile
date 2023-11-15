@@ -2,8 +2,8 @@ FROM --platform=${TARGETPLATFORM} lihaixin/base:3.16
 MAINTAINER Lee Haixin <noreply@15099.net>
 
 LABEL vendor="15099.net" \
-      release-date="2023-6-9" \
-      version="0.0.6"
+      release-date="2023-11-15" \
+      version="0.0.7"
 ENV TZ=Asia/Shanghai
 WORKDIR /root
 ENV DOCKERID=toolbox
