@@ -2,7 +2,7 @@
 ## 构建镜像
 
 ```
-docker buildx build --platform linux/arm64,linux/amd64 -t lihaixin/toolbox -t lihaixin/toolbox:0.0.7 https://github.com/lihaixin/toolbox.git --push
+docker buildx build --platform linux/arm64,linux/arm,linux/386,linux/amd64 -t lihaixin/toolbox -t lihaixin/toolbox:0.0.7 https://github.com/lihaixin/toolbox.git --push
 ```
 
 # toolbox
