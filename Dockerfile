@@ -1,4 +1,4 @@
-FROM --platform=${TARGETPLATFORM} lihaixin/base:3.16
+FROM --platform=${TARGETPLATFORM} alpine:3.16
 MAINTAINER Lee Haixin <noreply@15099.net>
 
 LABEL vendor="15099.net" \
