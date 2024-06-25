@@ -37,5 +37,6 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          ikuaiapp/toolbox:latest
+          ${{ secrets.DOCKER_USERNAME }}/toolbox:latest
+          ${{ secrets.DOCKER_USERNAME }}/toolbox:${{ github.sha }}
 
