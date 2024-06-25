@@ -1,9 +1,10 @@
 FROM --platform=${TARGETPLATFORM} alpine:3.16
-MAINTAINER Lee Haixin <noreply@15099.net>
 
+ARG BUILDPLATFORM
 LABEL vendor="15099.net" \
       release-date="2023-11-15" \
-      version="0.0.7"
+      version="0.0.7" \
+      maintainer=noreply@15099.net
 ENV TZ=Asia/Shanghai
 WORKDIR /root
 ENV DOCKERID=toolbox
