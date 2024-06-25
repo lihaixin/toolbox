@@ -2,8 +2,8 @@ FROM --platform=${TARGETPLATFORM} alpine:3.16
 
 ARG BUILDPLATFORM
 LABEL vendor="15099.net" \
-      release-date="2023-11-15" \
-      version="0.0.7" \
+      release-date="2024-6-25" \
+      version="0.0.8" \
       maintainer=noreply@15099.net
 ENV TZ=Asia/Shanghai
 WORKDIR /root
