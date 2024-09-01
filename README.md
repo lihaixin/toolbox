@@ -65,7 +65,7 @@ lihaixin/toolbox
 ## docker-compose
 
 ```
-version: "3.7"
+version: "2"
 services:
   toolbox:
     image: lihaixin/toolbox
