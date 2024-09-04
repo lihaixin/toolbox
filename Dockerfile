@@ -1,5 +1,5 @@
 FROM --platform=${TARGETPLATFORM} portainer/portainer-ce:2.19.5-alpine AS buildportainer
-FROM --platform=${TARGETPLATFORM} quay.io/vektorlab/ctop:latest AS buildctop
+FROM --platform=${TARGETPLATFORM} elswork/ctop AS buildctop
 FROM --platform=${TARGETPLATFORM} alpine:3.16
 
 ARG BUILDPLATFORM
