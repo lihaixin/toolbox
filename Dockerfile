@@ -12,7 +12,7 @@ WORKDIR /root
 ENV DOCKERID=toolbox
 COPY --from=buildportainer /docker /usr/bin/docker
 COPY --from=buildctop /usr/bin/ctop /usr/bin/ctop
-RUN apk add --no-cache --virtual .build-deps iftop mtr curl net-tools iperf3 htop tmux openssh-client bash tzdata bind-tools iptables figlet iptraf-ng nmap speedtest-cli qemu-img xz musl
+RUN apk add --no-cache --virtual .build-deps iftop mtr curl net-tools iperf3 htop tmux openssh-client bash tzdata bind-tools iptables figlet iptraf-ng nmap speedtest-cli qemu-img xz musl lm-sensors
 ADD ./.bashrc /root/.bashrc      
 # CMD ["ping","localhost"]
 ENTRYPOINT ["/bin/bash"]
