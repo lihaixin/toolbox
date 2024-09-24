@@ -15,6 +15,7 @@ alias tmux='tmux -u'
 alias h='cd ~;clear;'
 alias speed='time curl -o /dev/null http://cachefly.cachefly.net/100mb.test'
 alias speedcn='time curl -o /dev/null http://dldir1.qq.com/qqfile/qq/QQ9.0.8/24201/QQ9.0.8.24201.exe'
+alias sshx='curl -sSf https://sshx.io/get | sh -s run'
 alias reboot='kill -9 `pgrep bash` 1> /dev/null 2>&1;sleep 1;pkill -s 1'
 . /etc/os-release
 
