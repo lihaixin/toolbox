@@ -13,6 +13,7 @@ RUN apt-get update \
     git \
     net-tools \
     iputils-ping \
+    mtr \
     dnsutils \
     tcpdump \
     htop \
@@ -24,6 +25,6 @@ RUN apt-get update \
 
 # 设置工作目录（按需挂载）
 WORKDIR /root
-
+ADD ./.bashrc.debian /root/.bashrc  
 # 默认进入交互式 Shell（便于手动测试）
 CMD ["/bin/bash"]
