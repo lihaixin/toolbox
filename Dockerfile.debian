@@ -5,8 +5,8 @@ FROM debian:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 安装核心工具集 + coturn
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
     curl \
     wget \
     vim \
@@ -18,12 +18,12 @@ RUN apt-get update && \
     htop \
     nmap \
     procps \
-    coturn \      # STUN/TURN 测试工具
+    coturn \
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/*
 
 # 设置工作目录（按需挂载）
-WORKDIR /workspace
+WORKDIR /root
 
 # 默认进入交互式 Shell（便于手动测试）
 CMD ["/bin/bash"]
