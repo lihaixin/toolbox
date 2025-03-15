@@ -1,12 +1,12 @@
 FROM --platform=${TARGETPLATFORM} portainer/portainer-ce:2.19.5-alpine AS buildportainer
 FROM --platform=${TARGETPLATFORM} ekzhang/bore AS buildbore
 FROM --platform=${TARGETPLATFORM} elswork/ctop AS buildctop
-FROM --platform=${TARGETPLATFORM} alpine:3.16
+FROM --platform=${TARGETPLATFORM} alpine:3.20
 
 ARG BUILDPLATFORM
 LABEL vendor="15099.net" \
-      release-date="2024-9-4" \
-      version="0.1.0" \
+      release-date="2025-3-15" \
+      version="0.2.0" \
       maintainer=noreply@15099.net
 ENV TZ=Asia/Shanghai
 WORKDIR /root
