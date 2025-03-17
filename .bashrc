@@ -25,7 +25,7 @@ echo " # -----------------------------------------------------------------------
 
 DOCKER=`ifconfig | grep -ci "docker0"`
 if [ $DOCKER -eq 1 ]; then
-DOCKERIP=`/sbin/ifconfig docker0 | grep 'inet' | awk '{ print $2}' | awk -F ":" '{print $2 }' | head -n 1`
+DOCKERIP=`/sbin/ifconfig docker0 | awk '/inet / {gsub("addr:", "", $2); print $2}'`
 alias lh="ssh root@$DOCKERIP -p "
 echo " # 使用<lh SSH端口> 快速登陆宿主机 查看别名使用输入alias"
 echo " # 使用<iptraf-ng> 或者<iftop> 实时查看流量统计"
