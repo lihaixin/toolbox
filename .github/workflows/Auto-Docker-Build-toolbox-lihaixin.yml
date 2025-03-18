@@ -3,7 +3,11 @@ name: Docker Buildx Multiarch
 on:
   push:
     branches:
-      - master # 触发构建的分支
+      - master
+    paths:
+      - Dockerfile
+      - README.md
+      - .github/workflows/Auto-Docker-Build-toolbox-lihaixin.yml
 
 jobs:
   build-and-push:
@@ -39,4 +43,12 @@ jobs:
         tags: |
           ${{ secrets.DOCKER_USERNAME_LIHAIXIN }}/${{ github.event.repository.name }}:latest
         # ${{ secrets.DOCKER_USERNAME }}/toolbox:${{ github.sha }}
+    - name: Docker Hub Description
+      uses: peter-evans/dockerhub-description@v4
+      with:
+        username: ${{ secrets.DOCKER_USERNAME_LIHAIXIN }}
+        password: ${{ secrets.DOCKER_PASSWORD_LIHAIXIN }}
+        repository: ${{ secrets.DOCKER_USERNAME_LIHAIXIN }}/toolbox
+        short-description: toolbox
+        readme-filepath: ./README.md
 
