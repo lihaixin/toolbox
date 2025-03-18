@@ -6,7 +6,6 @@ on:
       - master
     paths:
       - Dockerfile:debian
-      - README-debian.md
       - .github/workflows/Auto-Docker-Build-toolbox-debian.yml
 
 jobs:
