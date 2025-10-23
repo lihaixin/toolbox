@@ -4,7 +4,9 @@
 ```
 docker buildx build --platform linux/arm64,linux/arm,linux/386,linux/amd64 -t lihaixin/toolbox -t lihaixin/toolbox:0.0.7 https://github.com/lihaixin/toolbox.git --push
 ```
-
+## 变化
+1. 2025-1-23 添加./bashrc mtr-as函数
+2. 
 # toolbox
 
 基于alpine提供的常用工具集,通过portainer管理界面，登陆Console，就可以快速访问宿主机终端进行系统维护
