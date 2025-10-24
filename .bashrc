@@ -62,6 +62,7 @@ mtr-as() {
 }
 
 # Aliases
+#  iftop -f 'portrange 17401-17420'
 alias l='ls -lAsh --color'
 alias ls='ls -C1 --color'
 alias cp='cp -ip'
