@@ -50,7 +50,7 @@ mtr-as() {
                 }
                 print ip, avg
             }
-        }' | sort -u -k1,1 | while read -r ip avg; do
+        }' | while read -r ip avg; do
             if [ -n "$ip" ] && [ -n "$avg" ]; then
                 org=$(curl -s "https://ipinfo.io/$ip/org" 2>/dev/null)
                 if [ -z "$org" ] || [ "$org" = "null" ] || echo "$org" | grep -qE '[{[]'; then
